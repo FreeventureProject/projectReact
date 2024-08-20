@@ -1,6 +1,6 @@
 # [Project Name]
 
-Created by [team member], [team member], and [team member].
+Created by Rashell and Kevin.
 
 ## 🚀 Mission statement
 
