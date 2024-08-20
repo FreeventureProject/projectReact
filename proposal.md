@@ -42,38 +42,27 @@ If time permits, the following stretch features will be implemented in order of 
 * Users will be able to lightmode/darkmode
 * Users will be able to save their free games (maybe)
 
-**Example:**
-* Users will be able to save and view favorited artworks using local storage 
-* Users will be able to change the color scheme of the website from light mode to dark mode
-
 ## 📆 Timeline for reaching MVP in 1 week
 
 To ensure that we can complete all core features of the application in 1 week, we will aim to complete tasks according to the following timeline:
 
 **Day 1**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Making sure fetching works (fetching for the right things, making sure they're working properly) 
+- [ ] Creating the bare-bones components needed (no functionality) 
 
 **Day 2**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Make proper functionality to the components 
+- [ ] Get the routing down (make sure the components are in their proper places)
+- [ ] General functionality throughout the site
 
 **Day 3** (MVP due by the end of the day)
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Focus on stretches ---> Local storage (?), Search Bar, Light mode/Dark mode
 
 **Day 4**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] MAKE IT LOOK PRETTY
 
 **Day 5**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] MAKE IT LOOK PRETTY
 
 ## Wireframes of each page in your application
 
