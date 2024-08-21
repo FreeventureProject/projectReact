@@ -47,22 +47,34 @@ If time permits, the following stretch features will be implemented in order of 
 To ensure that we can complete all core features of the application in 1 week, we will aim to complete tasks according to the following timeline:
 
 **Day 1**
-- [ ] Making sure fetching works (fetching for the right things, making sure they're working properly) 
-- [ ] Creating the bare-bones components needed (no functionality) 
+- [ ] Created a vite + react project 
+- [ ] Use React Router for client side routing 
+- [ ] Use context
+- [ ] Fetch data (singular recource/ multiple resources)
+- [ ] Fetch specific games 
+- [ ] Bonus: Were able to get it deployed in a functional state
+- [ ] Created barebone components (3) and have them in their own files
+- [ ] Use useState (x3) and useEffect (x2)
+- [ ] Handle non-submisson events (x2) 
 
-**Day 2**
+**Day 2** (MVP due by the end of the day)
 - [ ] Make proper functionality to the components 
 - [ ] Get the routing down (make sure the components are in their proper places)
 - [ ] General functionality throughout the site
 
-**Day 3** (MVP due by the end of the day)
+**Day 3** 
 - [ ] Focus on stretches ---> Local storage (?), Search Bar, Light mode/Dark mode
 
 **Day 4**
-- [ ] MAKE IT LOOK PRETTY
+- [ ] Navigation bar fits clearly on both moble and desktop
+- [ ] Fonts (no more than 2)
+- [ ] Color 
+
 
 **Day 5**
-- [ ] MAKE IT LOOK PRETTY
+- [ ] Buttons have altered visual states for hover, active, and focus
+- [ ] Links have altered visual states for hover, active, and focus
+- [ ] Make the site public 
 
 ## Wireframes of each page in your application
 
