@@ -1,14 +1,21 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import WeatherContainer from './components/fetchingData'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [game, setGame] = useState()
+  const [error, setError] = useState(null)
 
   return (
     <>
+      <WeatherContainer setError={setError} setGame={setGame} />
+      <header className='headerNav'>
+        <nav>
 
+        </nav>
+      </header>
+
+      <h2>HELLO</h2>
     </>
   )
 }

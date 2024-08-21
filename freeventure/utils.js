@@ -1,5 +1,6 @@
 export const handleFetch = async (url, options = {}) => {
   try {
+    console.log("test")
     const response = await fetch(url, options);
     const { ok, status, statusText, headers } = response;
     console.log('response:', { ok, status, statusText, headers });
@@ -13,4 +14,14 @@ export const handleFetch = async (url, options = {}) => {
     console.warn(error)
     return [null, error];
   }
-};
+}
+// const check = () => {
+//   console.log("here")
+//   fetch('https://www.freetogame.com/api')
+//     .then((data) => {
+//       console.log(data);
+//     })
+// }
+
+
+// check();
