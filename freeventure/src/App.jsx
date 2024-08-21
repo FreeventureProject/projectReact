@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import WeatherContainer from './components/fetchingData'
+import WeatherContainer from './components/WeatherContainer'
 
 function App() {
   const [game, setGame] = useState()
