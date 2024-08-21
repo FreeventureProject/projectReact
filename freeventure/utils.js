@@ -15,13 +15,13 @@ export const handleFetch = async (url, options = {}) => {
     return [null, error];
   }
 }
-const check = () => {
-  console.log("here")
-  fetch('https://www.freetogame.com/api')
-    .then((data) => {
-      console.log(data);
-    })
-}
+// const check = () => {
+//   console.log("here")
+//   fetch('https://www.freetogame.com/api')
+//     .then((data) => {
+//       console.log(data);
+//     })
+// }
 
 
-check();
+// check();
