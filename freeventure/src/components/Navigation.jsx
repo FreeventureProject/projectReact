@@ -3,7 +3,7 @@ function NavBar({ title }) {
     <a href="">{title}</a>
     <ul>
       <li>
-        FORECAST
+        Astrology
       </li>
     </ul>
   </nav>
