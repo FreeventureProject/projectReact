@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom"
 function NavBar({ title }) {
   return <nav className="nav">
-    <a href="">{title}</a>
+    <Link to='/'>{title}</Link>
     <ul>
       <li>
-        Astrology
+        <Link to="/astrology">Astrology</Link>
       </li>
     </ul>
   </nav>

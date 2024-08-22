@@ -1,21 +1,22 @@
 import { useState } from 'react'
 import './App.css'
-import WeatherContainer from './components/WeatherContainer'
 import NavBar from './components/Navigation'
-import SearchBar from './components/Searchbar'
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './Pages/HomePage'
+import AstrologyPage from './Pages/AstrologyPage'
 
 const locations = ['new york', 'london', 'paris'];
 
 function App() {
-  const [error, setError] = useState(null)
+
 
   return (
     <>
       <NavBar title="Weather Watchers" />
-      <WeatherContainer setError={setError} />
-      <h2>What's The Weather? </h2>
-      <SearchBar />
-
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/astrology" element={<AstrologyPage />} />
+      </Routes>
     </>
   )
 }
