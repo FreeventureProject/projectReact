@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import NavBar from './components/Navigation'
-import SearchBar from './components/Searchbar'
 import { API_KEY } from '../config'
 import { handleFetch } from '../utils'
 import { Routes, Route } from 'react-router-dom'
