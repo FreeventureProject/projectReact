@@ -9,10 +9,16 @@ function App() {
 
   return (
     <>
+      <WeatherContainer setError={setError} setGame={setGame} />
+      <header className='headerNav'>
+        <nav>
+        </nav>
+      </header>
+
       <NavBar title="Weather Watchers" />
       <WeatherContainer weather={weather} setError={setError} setWeather={setWeather} />
 
-      <h2>HELLO</h2>
+      <h2>What's The Weather? </h2>
     </>
   )
 }
