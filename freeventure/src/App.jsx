@@ -1,16 +1,21 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import WeatherContainer from './components/WeatherContainer'
 import NavBar from './components/Navigation'
 import SearchBar from './components/Searchbar'
 import { API_KEY } from '../config'
 import { handleFetch } from '../utils'
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './Pages/HomePage'
+import AstrologyPage from './Pages/AstrologyPage'
 
 // const locations = ['new york', 'london', 'paris'];
 
 function App() {
+
   const [weather, setWeather] = useState([])
   const [error, setError] = useState(null)
+
+
 
   const handleSubmit = async (location) => {
     event.preventDefault();
@@ -28,10 +33,10 @@ function App() {
   return (
     <>
       <NavBar title="Weather Watchers" />
-      <WeatherContainer setError={setError} />
-      <h2>What's The Weather? </h2>
-      <SearchBar handleSubmit={handleSubmit} />
-
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/astrology" element={<AstrologyPage />} />
+      </Routes>
     </>
   )
 }
