@@ -31,7 +31,7 @@ function WeatherContainer({ setError }) {
           <div className="weatherIdxContainer" key={index}>
             <h3>{weather.location.name}</h3>
 
-            <p>Temperature: {weather.current.temp_f}</p>
+            <p>Temperature: {Math.floor(weather.current.temp_f)}°</p>
             <p>Country: {weather.current.condition.text}</p>
           </div>
         ))
