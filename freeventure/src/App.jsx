@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import WeatherContainer from './components/fetchingData'
+import WeatherContainer from './components/WeatherContainer'
 
 function App() {
   const [game, setGame] = useState()
@@ -11,11 +11,10 @@ function App() {
       <WeatherContainer setError={setError} setGame={setGame} />
       <header className='headerNav'>
         <nav>
-
         </nav>
       </header>
 
-      <h2>HELLO</h2>
+      <h2>What's The Weather? </h2>
     </>
   )
 }
