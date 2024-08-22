@@ -1,37 +1,45 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { handleFetch } from "../../utils";
+import { API_KEY } from "../../config";
+
+
+const locations = ['new york', 'london', 'paris'];
 
 // fetching multiple 
-function WeatherContainer({ weather, setError, setWeather }) {
+function WeatherContainer({ setError }) {
+  const [weatherData, setWeatherData] = useState([]);
 
   useEffect(() => {
+    const fetchWeatherData = async () => {
+      const weatherResponses = await Promise.all(
+        locations.map(async (location) => {
+          const [data, error] = await handleFetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}&aqi=yes`);
+          if (error) setError(error);
+          return data;
+        })
+      );
+      setWeatherData(weatherResponses);
+    };
 
-    const doFetch = async () => {
-      const [data, error] = await handleFetch(`http://api.weatherapi.com/v1/current.json?key=de3930ea69884d4383d220010242108&q=11214&aqi=yes`)
-      if (data) setWeather(data)
-      if (error) setError(error)
-
-
-
-      console.log(data)
-    }
-
-    doFetch();
-
-  }, [setWeather, setError])
-
+    fetchWeatherData();
+  }, [setError]);
 
   return (
-    <div>
-      {weather && weather.location ? (
-        <p>{weather.location.name}</p>,
-        <p>{weather.location.region}</p>
+    <div className="weatherDataContainer">
+      {weatherData.length > 0 ? (
+        weatherData.map((weather, index) => (
+          <div className="weatherIdxContainer" key={index}>
+            <h3>{weather.location.name}</h3>
+
+            <p>Temperature: {weather.current.temp_f}</p>
+            <p>Country: {weather.current.condition.text}</p>
+          </div>
+        ))
       ) : (
         <p>Loading...</p>
       )}
     </div>
-  )
-
+  );
 }
 
 export default WeatherContainer
