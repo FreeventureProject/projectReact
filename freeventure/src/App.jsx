@@ -11,9 +11,9 @@ function App() {
   return (
     <>
       <NavBar title="Weather Watchers" />
-      <WeatherContainer weather={weather} setError={setError} setWeather={setWeather} />
       <h2>What's The Weather? </h2>
       <SearchBar />
+      <WeatherContainer weather={weather} setError={setError} setWeather={setWeather} />
     </>
   )
 }
