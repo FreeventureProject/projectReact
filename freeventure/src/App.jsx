@@ -1,19 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import WeatherContainer from './components/fetchingData'
+import WeatherContainer from './components/WeatherContainer'
+import NavBar from './components/Navigation'
 
 function App() {
-  const [game, setGame] = useState()
+  const [weather, setWeather] = useState([])
   const [error, setError] = useState(null)
 
   return (
     <>
-      <WeatherContainer setError={setError} setGame={setGame} />
-      <header className='headerNav'>
-        <nav>
-
-        </nav>
-      </header>
+      <NavBar title="Weather Watchers" />
+      <WeatherContainer weather={weather} setError={setError} setWeather={setWeather} />
 
       <h2>HELLO</h2>
     </>
