@@ -3,14 +3,15 @@ import './App.css'
 import WeatherContainer from './components/WeatherContainer'
 import NavBar from './components/Navigation'
 
+const locations = ['new york', 'london', 'paris'];
+
 function App() {
-  const [weather, setWeather] = useState([])
   const [error, setError] = useState(null)
 
   return (
     <>
       <NavBar title="Weather Watchers" />
-      <WeatherContainer weather={weather} setError={setError} setWeather={setWeather} />
+      <WeatherContainer setError={setError} />
 
       <h2>HELLO</h2>
     </>
