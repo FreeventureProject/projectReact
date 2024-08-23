@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
 
-  margin: 7rem 0 6rem 0;
+  margin: 14rem 0 20rem 0;
   gap: 10rem;
 }
 
@@ -55,4 +55,8 @@
   display: flex;
   justify-content: space-evenly;
 
+}
+
+.weatherIdxContainer {
+  order: 3;
 }
