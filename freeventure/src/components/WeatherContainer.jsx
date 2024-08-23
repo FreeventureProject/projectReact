@@ -3,7 +3,7 @@ import { handleFetch } from "../../utils";
 import { API_KEY } from "../../config";
 
 
-const locations = ['new york', 'london', 'paris'];
+const locations = ['new york', 'london', 'tokyo'];
 
 // fetching multiple 
 function WeatherContainer({ setError }) {
@@ -29,10 +29,14 @@ function WeatherContainer({ setError }) {
       {weatherData.length > 0 ? (
         weatherData.map((weather, index) => (
           <div className="weatherIdxContainer" key={index}>
-            <h3>{weather.location.name}</h3>
+            <h3 className="nameLocation">{weather.location.name}</h3>
+            <p>{weather.current.condition.text}</p>
+            <p>{Math.floor(weather.current.temp_f)} °F</p>
 
-            <p>Temperature: {Math.floor(weather.current.temp_f)}°</p>
-            <p>Country: {weather.current.condition.text}</p>
+
+            <p>Feels like: {Math.floor(weather.current.feelslike_f)} °F</p>
+            <p>Wind Speed (mph): {Math.floor(weather.current.wind_mph)}</p>
+            <p>(kph): {Math.floor(weather.current.wind_kph)}</p>
           </div>
         ))
       ) : (

@@ -13,12 +13,46 @@
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  /* gap: 1rem; */
+}
+
+.searchBarContainer {
+  display: flex;
+  justify-content: center;
+
+  margin: 7rem 0 6rem 0;
+  gap: 10rem;
+}
+
+.headingWeatherContainer {
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.searchBarContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.searchBarContainer input {
+  height: 50px;
+  width: 300px;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.searchBarContainer button {
+  margin-top: 10px;
 }
 
 .weatherDataContainer {
-  margin-top: 4rem;
+  margin-top: 10rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
 }
