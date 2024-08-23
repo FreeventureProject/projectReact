@@ -21,6 +21,25 @@ function AstronomyContainer({ setError }) {
     fetchAstronomyData();
   }, [setError]);
 
+  if (loading) return <div>Loading...</div>;
+  if (astronomyData.length === 0) return <div>No data available</div>;
+
+  return (
+    <div>
+      <h1>Astronomy Data</h1>
+      <ul>
+        {astronomyData.map((data, index) => (
+          <li key={index}>
+            <h2>{data.location.name}</h2>
+            <p>Sunrise: {data.astronomy.astro.sunrise}</p>
+            <p>Sunset: {data.astronomy.astro.sunset}</p>
+            {/* Add more fields as needed */}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
 }
 
 export default AstronomyContainer
