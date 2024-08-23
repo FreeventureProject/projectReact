@@ -1,7 +1,10 @@
+import AstronomyContainer from "../components/AstonomyContainer"
+
 const AstrologyPage = () => {
   return (
     <>
-      <p>test</p>
+      <h2>Astronomy</h2>
+
     </>
   )
 }
