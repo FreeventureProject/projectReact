@@ -1,6 +1,6 @@
 export const handleFetch = async (url, options = {}) => {
   try {
-    console.log("test")
+    // console.log("test")
     const response = await fetch(url, options);
     const { ok, status, statusText, headers } = response;
     console.log('response:', { ok, status, statusText, headers });
