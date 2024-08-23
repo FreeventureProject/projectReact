@@ -3,43 +3,32 @@ import { handleFetch } from "../../utils";
 import { API_KEY } from "../../config";
 
 // fetching astronomy
-function AstronomyContainer({ setError }) {
-  const [astronomyData, setAstronomyData] = useState([]);
-
+function AstronomyContainer({ astronomyData, setAstronomy, setError }) {
   useEffect(() => {
-    const fetchAstronomyData = async () => {
-      const AstronomyResponses = await Promise.all(
-        locations.map(async (location) => {
-          const [data, error] = await handleFetch(`http://api.weatherapi.com/v1/astronomy.json?key=${API_KEY}&q=${location}&dt=`);
-          if (error) setError(error);
-          return data;
-        })
-      );
-      setAstronomyData(AstronomyResponses);
-    };
+    const doFetch = async () => {
+      const [data, error] = await handleFetch(`http://api.weatherapi.com/v1/astronomy.json?key=${API_KEY}&q=${location}&dt=`)
+      if (data) setAstronomy(data)
+      if (error) setError(error)
 
-    fetchAstronomyData();
-  }, [setError]);
+      console.log(data)
+    }
 
-  if (loading) return <div>Loading...</div>;
-  if (astronomyData.length === 0) return <div>No data available</div>;
+    doFetch();
+
+  }, [])
+
+  // if (error) return <p>{error.message}</p>
 
   return (
     <div>
-      <h1>Astronomy Data</h1>
-      <ul>
-        {astronomyData.map((data, index) => (
-          <li key={index}>
-            <h2>{data.location.name}</h2>
-            <p>Sunrise: {data.astronomy.astro.sunrise}</p>
-            <p>Sunset: {data.astronomy.astro.sunset}</p>
-            {/* Add more fields as needed */}
-          </li>
-        ))}
-      </ul>
+      {astronomyData.location && (
+        <>
+          <h3>{astronomyData.location.name}</h3>
+          <p></p>
+        </>
+      )}
     </div>
-  );
-
+  )
 }
 
 export default AstronomyContainer
