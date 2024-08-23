@@ -4,6 +4,7 @@ import { API_KEY } from "../../config";
 
 
 const locations = ['new york', 'london', 'tokyo'];
+const locations = ['new york', 'london', 'tokyo', 'berlin'];
 
 // fetching multiple 
 function WeatherContainer({ setError }) {

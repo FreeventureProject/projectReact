@@ -3,6 +3,7 @@ import WeatherContainer from "../components/WeatherContainer"
 import { useState, useEffect } from "react"
 import { handleFetch } from "../../utils"
 import { API_KEY } from "../../config"
+
 function HomePage() {
 
   const [weather, setWeather] = useState([])
