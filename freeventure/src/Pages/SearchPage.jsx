@@ -39,6 +39,7 @@ const SearchPage = ({ setError }) => {
           <p>{Math.floor(weatherData.current.temp_f)} °F</p>
           <p>feels like: {Math.floor(weatherData.current.feelslike_f)} °F</p>
           <p>{weatherData.current.condition.text}</p>
+          <button>Forcast</button>
 
         </div>
       ) : (
