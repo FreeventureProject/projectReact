@@ -14,7 +14,6 @@ const SearchBar = () => {
   }
 
   return (
-
     <div className="searchBarContainer">
       <div className="headingWeatherContainer">
         <h2>Today's Weather? </h2>
