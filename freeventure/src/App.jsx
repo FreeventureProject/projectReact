@@ -31,10 +31,10 @@ function App() {
 
   return (
     <>
-      <NavBar title="Weather Watchers" />
+      <NavBar title="Weather Watch" />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/astrology" element={<AstrologyPage />} />
+        <Route path="/astronomy" element={<AstrologyPage />} />
       </Routes>
     </>
   )
