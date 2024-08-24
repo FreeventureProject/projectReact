@@ -11,19 +11,32 @@ const ForecastPage = () => {
   const [forecast, setForecast] = useState('')
   const [error, setError] = useState(null)
 
-  const handleSubmit = async (query) => {
+  const handleSubmit = async (event, query) => {
     event.preventDefault();
+    if (!query) {
+      setError("Please enter a location")
+      return;
+    };
     const [data, error] = await handleFetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${query}&days=5&aqi=yes&alerts=yes`)
-    if (data) setForecast(data)
-    if (error) setError(error)
-
-
+    if (data) {
+      setForecast(data)
+      setError(null)
+    } else {
+      setError(error)
+    }
   }
+
+
 
   return (
     <div>
-      <ForecastSearch handleSubmit={handleSubmit} />
-      <ForecastContainer forecast={forecast} setError={setError} setForecast={setForecast} />
+      <ForecastSearch onSubmit={handleSubmit} />
+      {error && <p>{error}</p>}
+      {forecast ? (
+        <ForecastContainer forecast={forecast} />
+      ) : (
+        !error && <p>Please enter a location to see the forecast</p>
+      )}
     </div>
   )
 }

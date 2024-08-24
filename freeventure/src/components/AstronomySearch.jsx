@@ -1,17 +1,17 @@
 import { useState } from "react";
 
-const AstronomySearch = ({ handleSubmit }) => {
+const AstronomySearch = ({ onSubmit }) => {
 
-  const [value, setValue] = useState('');
+  const [query, setValue] = useState('');
 
-  const onSubmit = () => {
-    handleSubmit(value);
+  const handleChange = (event) => {
+    setValue(event.target.value);
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={(event) => onSubmit(event, query)}>
       <label htmlFor="searchInput">Enter a Search Term </label>
-      <input type="text" className="form-control" id="searchInput" value={value} onChange={(e) => setValue(e.target.value)} />
+      <input type="text" className="form-control" id="searchInput" value={query} onChange={handleChange} placeholder="Enter Location" />
       <button type="submit" className="btn btn-success">Search</button>
     </form>
   )

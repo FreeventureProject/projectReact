@@ -1,4 +1,4 @@
-import SearchBar from "../components/Searchbar"
+import SearchBarHome from "../components/SearchbarHome"
 import WeatherContainer from "../components/WeatherContainer"
 import { useState, useEffect } from "react"
 import { handleFetch } from "../../utils"
@@ -25,7 +25,7 @@ function HomePage() {
   // }, [weather])
   return (
     <>
-      <SearchBar handleSubmit={handleSubmit} />
+      <SearchBarHome handleSubmit={handleSubmit} />
       <WeatherContainer setError={setError} />
     </>
   )

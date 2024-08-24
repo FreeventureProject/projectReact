@@ -1,24 +1,37 @@
 import AstronomyContainer from "../components/AstonomyContainer"
 import { useState } from "react";
 import AstronomySearch from "../components/AstronomySearch";
+import { handleFetch } from "../../utils";
+import { API_KEY } from "../../config";
 
 const AstronomyPage = () => {
   const [astronomyData, setAstronomy] = useState('')
   const [error, setError] = useState(null)
 
-  const handleSubmit = async (query) => {
+  const handleSubmit = async (event, query) => {
     event.preventDefault();
+    if (!query) {
+      setError("Please enter a location")
+      return;
+    };
     const [data, error] = await handleFetch(`http://api.weatherapi.com/v1/astronomy.json?key=${API_KEY}&q=${query}&dt=`)
-    if (data) setAstronomy(data)
-    if (error) setError(error)
-
-
+    if (data) {
+      setAstronomy(data)
+      setError(null)
+    } else {
+      setError(error)
+    }
   }
 
   return (
     <div>
-      <AstronomySearch handleSubmit={handleSubmit} />
-      <AstronomyContainer astronomyData={astronomyData} setAstronomy={setAstronomy} setError={setError} />
+      <AstronomySearch onSubmit={handleSubmit} />
+      {error && <p>{error}</p>}
+      {astronomyData ? (
+        <AstronomyContainer astronomyData={astronomyData} />
+      ) : (
+        !error && <p>Please enter a location to see the astronomy</p>
+      )}
     </div>
   )
 }
