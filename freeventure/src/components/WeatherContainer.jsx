@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { handleFetch } from "../../utils";
 import { API_KEY } from "../../config";
 
-const locations = ['new york', 'london', 'tokyo', 'berlin'];
+const locations = ['new york', 'london', 'tokyo'];
 
 // fetching multiple 
 function WeatherContainer({ setError }) {
