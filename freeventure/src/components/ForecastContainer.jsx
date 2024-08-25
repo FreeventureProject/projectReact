@@ -4,28 +4,20 @@ import { handleFetch } from "../../utils"
 
 
 function ForecastContainer({ forecast }) {
-
-  // useEffect(() => {
-  //   const doFetch = async () => {
-  //     const [data, error] = await handleFetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=london&days=5&aqi=yes&alerts=yes`)
-  //     if (data) setForecast(data)
-  //     if (error) setError(error)
-
-  //     console.log(data)
-  //   }
-
-  //   doFetch();
-
-  // }, [])
-
-  // if (error) return <p>{error.message}</p>
-
   return (
-    <div>
+    <div className="forecastContainer">
       {forecast.location && (
         <>
-          <h3>{forecast.location.name}</h3>
-          <p></p>
+          <h3 className="forecastHeader">{forecast.location.name}</h3>
+          <ul className="forecastList">
+            {forecast.forecast.forecastday.map((day, indx) => (
+              <li key={indx}>
+                <h4>{day.date}</h4>
+                <p>{day.day.maxtemp_f}</p>
+                <p>{day.day.mintemp_f}</p>
+              </li>
+            ))}
+          </ul>
         </>
       )}
     </div>

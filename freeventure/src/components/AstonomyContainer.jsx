@@ -24,7 +24,8 @@ function AstronomyContainer({ astronomyData }) {
       {astronomyData.location && (
         <>
           <h3>{astronomyData.location.name}</h3>
-          <p></p>
+          <p>{astronomyData.astronomy.astro.sunrise}</p>
+          <p>{astronomyData.astronomy.astro.sunset}</p>
         </>
       )}
     </div>

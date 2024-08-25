@@ -6,6 +6,7 @@ import AstrologyPage from './Pages/AstrologyPage'
 import SearchPage from './Pages/SearchPage'
 import ForecastPage from './Pages/ForecastPage'
 import { useState } from 'react'
+import React from 'react'
 
 export const ThemeContext = React.createContext()
 

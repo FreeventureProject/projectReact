@@ -1,5 +1,10 @@
 * {
   box-sizing: border-box;
+
+}
+
+body {
+  background-color: var(--background-color);
 }
 
 .nav {
@@ -38,7 +43,7 @@
 }
 
 
-.searchBarContainer input {
+.searchBarInput {
   height: 50px;
   width: 300px;
   border-radius: 20px;
@@ -60,7 +65,7 @@
   display: flex;
   justify-content: center;
 
-  margin: 14rem 0 20rem 0;
+  margin: 14rem 0 13rem 0;
   gap: 10rem;
 }
 
@@ -91,7 +96,7 @@
 }
 
 .weatherDataContainer {
-  margin-top: 10rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: space-evenly;
 
@@ -99,4 +104,9 @@
 
 .weatherIdxContainer {
   order: 3;
+  background-color: var(--foreground-color);
+}
+
+.weatherIdxContainer p {
+  color: var(--primary-text-color)
 }
