@@ -2,6 +2,7 @@ import { useLocation } from 'react-router-dom'
 import { API_KEY } from '../../config';
 import { handleFetch } from '../../utils';
 import { useState, useEffect } from 'react';
+import { useTheme } from '../ThemeContext';
 
 const SearchPage = ({ setError }) => {
   const [weatherData, setWeatherData] = useState(null);
@@ -9,6 +10,15 @@ const SearchPage = ({ setError }) => {
   const location = useLocation();
   const queryParamas = new URLSearchParams(location.search)
   const query = queryParamas.get("query")
+
+  const darkTheme = useTheme();
+
+  const themeStyles = {
+    backgroundColor: darkTheme ? '#1B2222' : '#EBEBEB',
+    color: darkTheme ? '#CEDEDA' : '#173B3B',
+    minHeight: '100vh',
+    transition: 'background-color 0.3s, color 0.3s',
+  };
 
 
   useEffect(() => {

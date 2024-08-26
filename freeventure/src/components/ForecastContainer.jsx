@@ -1,7 +1,3 @@
-import { useEffect, useState } from "react"
-import { API_KEY } from "../../config"
-import { handleFetch } from "../../utils"
-
 
 function ForecastContainer({ forecast }) {
   return (

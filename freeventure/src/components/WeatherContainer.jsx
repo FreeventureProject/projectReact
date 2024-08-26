@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { handleFetch } from "../../utils";
 import { API_KEY } from "../../config";
+import { useTheme } from "../ThemeContext";
 
 const locations = ['new york', 'london', 'tokyo'];
 

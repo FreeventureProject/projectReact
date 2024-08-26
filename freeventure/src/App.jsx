@@ -1,35 +1,51 @@
 import './App.css'
-import NavBar from './components/Navigation'
 import { Routes, Route } from 'react-router-dom'
+import React, { useState } from 'react'
+import NavBar from './components/Navigation'
 import HomePage from './Pages/HomePage'
 import AstrologyPage from './Pages/AstrologyPage'
 import SearchPage from './Pages/SearchPage'
 import ForecastPage from './Pages/ForecastPage'
-import { useState } from 'react'
-import React from 'react'
+import { ThemeProvider } from './ThemeContext'
+import ThemeComponent from './components/ThemeComponent'
+import { useTheme } from './ThemeContext'
 
-export const ThemeContext = React.createContext()
+
+
+
+function AppContent() {
+  const darkTheme = useTheme();
+
+  const themeStyles = {
+    backgroundColor: darkTheme ? '#1B2222' : '#EBEBEB',
+    color: darkTheme ? '#CEDEDA' : '#173B3B',
+    minHeight: '100vh',
+    transition: 'background-color 0.3s, color 0.3s',
+  };
+
+  return (
+    <div style={themeStyles}>
+      <NavBar title="Weather Watch" />
+      <ThemeComponent />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/astronomy" element={<AstrologyPage />} />
+        <Route path="/forecast" element={<ForecastPage />} />
+        <Route path="/astrology" element={<AstrologyPage />} />
+        <Route path="/search" element={<SearchPage />} />
+      </Routes>
+    </div>
+  );
+}
+
 
 function App() {
 
-  const [darkTheme, setDarkTheme] = useState(true)
-
-  function toggleTheme() {
-    setDarkTheme(prevDarkTheme => !prevDarkTheme)
-  }
-
   return (
     <>
-      <ThemeContext.Provider value={darkTheme}>
-        <NavBar title="Weather Watch" />
-        <Routes>
-          <Route path="/" element={<HomePage />} /> updatee
-          <Route path="/astronomy" element={<AstrologyPage />} />
-          <Route path="/forecast" element={<ForecastPage />} />
-          <Route path="/astrology" element={<AstrologyPage />} />
-          <Route path="/search" element={<SearchPage />} />
-        </Routes>
-      </ThemeContext.Provider>
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
     </>
   )
 }
