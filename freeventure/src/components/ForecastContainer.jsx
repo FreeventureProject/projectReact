@@ -9,8 +9,8 @@ function ForecastContainer({ forecast }) {
             {forecast.forecast.forecastday.map((day, indx) => (
               <li key={indx}>
                 <h4>{day.date}</h4>
-                <p>{day.day.maxtemp_f}</p>
-                <p>{day.day.mintemp_f}</p>
+                <p>High: {day.day.maxtemp_f} °F</p>
+                <p>Low: {day.day.mintemp_f} °F</p>
               </li>
             ))}
           </ul>
