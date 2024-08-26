@@ -1,5 +1,3 @@
-
-
 // fetching astronomy
 function AstronomyContainer({ astronomyData }) {
   return (
