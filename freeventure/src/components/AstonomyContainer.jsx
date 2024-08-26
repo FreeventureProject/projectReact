@@ -1,3 +1,5 @@
+import SunriseIcon from "../assets/SunriseIcon.png"
+
 // fetching astronomy
 function AstronomyContainer({ astronomyData }) {
   return (
@@ -5,7 +7,10 @@ function AstronomyContainer({ astronomyData }) {
       {astronomyData.location && (
         <>
           <h3>{astronomyData.location.name}</h3>
-          <p>{astronomyData.astronomy.astro.sunrise}</p>
+          <div className="sunrise">
+            <p>{astronomyData.astronomy.astro.sunrise}</p>
+            <img id="sun" src={SunriseIcon} alt="Sun" />
+          </div>
           <p>{astronomyData.astronomy.astro.sunset}</p>
         </>
       )}

@@ -17,8 +17,8 @@ function AppContent() {
   const darkTheme = useTheme();
 
   const themeStyles = {
-    backgroundColor: darkTheme ? '#EBEBEB' : '#1B2222',
-    color: darkTheme ? '#173B3B' : '#CEDEDA',
+    backgroundColor: darkTheme ? '#CEDEDA' : '#173B3B',
+    color: darkTheme ? '#455F4E' : '#CCDAD1',
     minHeight: '100vh',
     transition: 'background-color 0.3s, color 0.3s',
   };
