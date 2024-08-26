@@ -3,6 +3,8 @@ import { useState } from "react";
 import AstronomySearch from "../components/AstronomySearch";
 import { handleFetch } from "../../utils";
 import { API_KEY } from "../../config";
+import AstronomyWebpage from "../assets/AstronomyWebpage.jpg";
+
 
 const AstronomyPage = () => {
   const [astronomyData, setAstronomy] = useState('')
@@ -25,6 +27,7 @@ const AstronomyPage = () => {
 
   return (
     <div>
+      <img src={AstronomyWebpage} alt="Planets" />
       <AstronomySearch onSubmit={handleSubmit} />
       {error && <p>{error}</p>}
       {astronomyData ? (
