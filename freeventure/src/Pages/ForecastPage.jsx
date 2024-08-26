@@ -35,7 +35,8 @@ const ForecastPage = () => {
       {forecast ? (
         <ForecastContainer forecast={forecast} />
       ) : (
-        !error && <p>Please enter a location to see the forecast</p>
+        !error &&
+        <div className="errorContainer"><p>Please enter a location to see the forecast</p></div>
       )}
     </div>
   )
