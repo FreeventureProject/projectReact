@@ -29,7 +29,7 @@ const ForecastPage = () => {
 
 
   return (
-    <div>
+    <div className="forecastContainer">
       <ForecastSearch onSubmit={handleSubmit} />
       {error && <p>{error}</p>}
       {forecast ? (

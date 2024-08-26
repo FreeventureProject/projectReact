@@ -6,8 +6,8 @@ const ThemeComponent = () => {
   const toggleTheme = useThemeUpdate()
   console.log('current theme:', darkTheme)
   const themeStyles = {
-    backgroundColor: darkTheme ? '#1B2222' : '#EBEBEB',
-    color: darkTheme ? '#CEDEDA' : '#173B3B'
+    backgroundColor: darkTheme ? '#EBEBEB' : '#1B2222',
+    color: darkTheme ? '#173B3B' : '#CEDEDA'
   }
 
 
