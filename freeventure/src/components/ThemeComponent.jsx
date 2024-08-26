@@ -7,7 +7,9 @@ const ThemeComponent = () => {
   console.log('current theme:', darkTheme)
   const themeStyles = {
     backgroundColor: darkTheme ? '#EBEBEB' : '#1B2222',
+
     color: darkTheme ? '#173B3B' : '#CEDEDA'
+
   }
 
 
