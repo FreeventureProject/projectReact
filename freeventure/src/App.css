@@ -106,8 +106,24 @@ body {
   order: 3;
   background-color: var(--foreground-color);
   border-style: solid;
+  padding: 20px;
+
 }
 
 .weatherIdxContainer p {
-  color: var(--primary-text-color)
+  color: var(--primary-text-color);
+  padding: 5px
+}
+
+.weatherIdxContainer h3 {
+  padding-bottom: 50px;
+}
+
+.sunrise {
+  display: flex;
+  align-items: center;
+}
+
+#sun {
+  width: 30px;
 }
