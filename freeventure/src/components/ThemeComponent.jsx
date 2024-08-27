@@ -14,12 +14,9 @@ const ThemeComponent = () => {
 
 
   return (
-
-    <>
+    <div className="buttonContainer">
       <button onClick={toggleTheme}>toggle theme</button>
-      <div style={themeStyles}></div>
-    </>
-
+    </div>
   )
 }
 
