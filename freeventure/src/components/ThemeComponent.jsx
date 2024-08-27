@@ -6,20 +6,16 @@ const ThemeComponent = () => {
   const toggleTheme = useThemeUpdate()
   console.log('current theme:', darkTheme)
   const themeStyles = {
-    backgroundColor: darkTheme ? '#EBEBEB' : '#1B2222',
-
-    color: darkTheme ? '#173B3B' : '#CEDEDA'
-
+    backgroundColor: darkTheme ? '#1B2222' : '#EBEBEB',
+    color: darkTheme ? '#CEDEDA' : '#173B3B',
+    transition: 'background-color 0.3s, color 0.3s',
   }
 
 
   return (
-
-    <>
-      <button onClick={toggleTheme}>toggle theme</button>
-      <div style={themeStyles}></div>
-    </>
-
+    <div className="buttonContainer">
+      <button onClick={toggleTheme} style={themeStyles}>Dark Mode</button>
+    </div>
   )
 }
 
