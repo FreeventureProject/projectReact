@@ -9,6 +9,7 @@ import ForecastPage from './Pages/ForecastPage'
 import { ThemeProvider } from './ThemeContext'
 import ThemeComponent from './components/ThemeComponent'
 import { useTheme } from './ThemeContext'
+import NotFoundPage from './components/PageNotFoundComponent'
 
 
 
@@ -25,13 +26,14 @@ function AppContent() {
   return (
     <div style={themeStyles}>
       <NavBar title="Weather Watch" />
-      <ThemeComponent />
+      {/* <ThemeComponent /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/astronomy" element={<AstrologyPage />} />
         <Route path="/forecast" element={<ForecastPage />} />
         <Route path="/astrology" element={<AstrologyPage />} />
         <Route path="/search" element={<SearchPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );
