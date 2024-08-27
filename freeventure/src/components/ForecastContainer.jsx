@@ -3,7 +3,7 @@ function ForecastContainer({ forecast }) {
   return (
     <div className="forecastContainer">
       {forecast.location && (
-        <>
+        <div className="forecastListContainer">
           <h3 className="forecastHeader">{forecast.location.name}</h3>
           <ul className="forecastList">
             {forecast.forecast.forecastday.map((day, indx) => (
@@ -14,7 +14,7 @@ function ForecastContainer({ forecast }) {
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
     </div>
   )

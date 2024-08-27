@@ -66,9 +66,20 @@ html {
 }
 
 .logo {
+  display: flex;
+  flex-direction: column;
   font-size: 20px;
   font-weight: bolder;
 }
+
+.logoContainer {
+  translate: 1px 5px;
+}
+
+.buttonNavContainer {
+  translate: 25px -5px;
+}
+
 
 .buttonContainer {
   display: flex;
@@ -225,23 +236,72 @@ button:hover {
   visibility: visible;
   opacity: 1;
   transform: translate(-100%, 10%);
-  box-shadow: 12px 30px 0 0 black;
+  box-shadow: 12px 12px 0 0 black;
+}
+
+.weatherIdxContainer h3 {
+  padding-bottom: 50px;
+}
+
+.headingForecast {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
 }
 
 .forecastContainer {
-  justify-content: center;
+  margin-top: 2rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  animation: fadeIn 0.5s ease-in;
 }
 
-.forecastContainer form {
-  margin-top: 15rem;
+.forecastFormContainer {
+  display: flex;
+  margin-top: 10rem;
+}
+
+.forecastFormContainer input {
+  border: none;
+}
+
+.forecastFormContainer button {
+  margin-left: 8px;
+}
+
+.errorContainer {
+  display: flex;
+  align-items: center;
+}
+
+.forecastListContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.weatherIdxContainer h3 {
-  padding-bottom: 50px;
+.forecastListContainer li {
+  list-style-type: none;
+}
+
+.forecastList {
+  display: flex;
+  gap: 3rem;
+}
+
+.forecastList li {
+  padding: 5px;
+}
+
+
+.notFoundContainer {
+  font-size: 20px;
+  display: flex;
+  padding-top: 10rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sunrise {
@@ -255,5 +315,9 @@ button:hover {
 
 #earth {
   height: 50px;
-  animation: SPIN 20s infinite;
+  animation: SPIN 10s infinite;
+}
+
+.forecastEarthContainer {
+  padding-right: 10px;
 }
