@@ -13,10 +13,9 @@ const SearchPage = ({ setError }) => {
 
   const darkTheme = useTheme();
 
-  const themeStyles = {
-    backgroundColor: darkTheme ? '#1B2222' : '#EBEBEB',
-    color: darkTheme ? '#CEDEDA' : '#173B3B',
-    minHeight: '100vh',
+  const themeStylesIdx = {
+    backgroundColor: darkTheme ? '#EBEBEB' : '#1B2222',
+    color: darkTheme ? '#455F4E' : '#CCDAD1',
     transition: 'background-color 0.3s, color 0.3s',
   };
 
@@ -44,7 +43,7 @@ const SearchPage = ({ setError }) => {
       {loading ? (
         <p>Loading...</p>
       ) : weatherData ? (
-        <div className="weatherIdxContainer">
+        <div className="weatherIdxContainer" style={themeStylesIdx}>
           <h3 className='nameLocation'>{weatherData.location.name}</h3>
           <p>{Math.floor(weatherData.current.temp_f)} °F</p>
           <p>feels like: {Math.floor(weatherData.current.feelslike_f)} °F</p>
