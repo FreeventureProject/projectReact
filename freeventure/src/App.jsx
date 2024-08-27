@@ -20,7 +20,6 @@ function AppContent() {
     backgroundColor: darkTheme ? '#CEDEDA' : '#173B3B',
     color: darkTheme ? '#455F4E' : '#CCDAD1',
     minHeight: '100vh',
-    transition: 'background-color 0.3s, color 0.3s',
   };
 
   return (
