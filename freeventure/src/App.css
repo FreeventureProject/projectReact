@@ -249,11 +249,128 @@ button:hover {
   align-items: center;
 }
 
-#sun {
+#sunrisePic {
   width: 30px;
+  margin-left: 10px;
+}
+
+.sunset {
+  display: flex;
+  align-items: center;
+}
+
+#sunsetPic {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.moonrise {
+  display: flex;
+  align-items: center;
+}
+
+#moonrisePic {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.moonset {
+  display: flex;
+  align-items: center;
+}
+
+#moonsetPic {
+  width: 30px;
+  margin-left: 10px;
+}
+
+
+.sun {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  background: rgb(255, 81, 0);
+  position: absolute;
+  box-shadow: 0 0 75px rgba(255, 141, 0, 1);
+}
+
+.astroSearch {
+  margin-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px
+}
+
+.formContainerAstro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100vh;
+  /* Take up the remaining vertical space */
+  padding: 10px;
+  /* Optional: Add padding if needed */
+  box-sizing: border-box;
+  position: relative;
+}
+
+p {
+  text-align: center;
+  /* Center text if needed */
+  margin: 10px 0;
+  /* Space above and below the <p> tag */
+}
+
+.astroCard {
+  border-style: solid;
+  padding-left: 20px;
+  position: relative;
+  background: lightgrey;
+  width: 200px;
+  border-radius: 25px;
+  margin: auto;
+}
+
+.earth::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: url("src/assets/moon.png");
+  background-size: cover;
+  animation: moon-orbit 3.5s linear infinite
+}
+
+@keyframes earth-orbit {
+  from {
+    transform: rotate(0deg) translateX(220px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(220px) rotate(-360deg);
+  }
+}
+
+@keyframes moon-orbit {
+  from {
+    transform: rotate(0deg) translateX(75px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(75px) rotate(-360deg);
+  }
+}
+
+.headingContainer {
+  display: flex;
+  justify-content: center;
+
 }
 
 #earth {
   height: 50px;
   animation: SPIN 20s infinite;
+
 }
