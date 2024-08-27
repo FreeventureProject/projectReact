@@ -27,6 +27,7 @@ function HomePage() {
     <>
       <SearchBarHome handleSubmit={handleSubmit} />
       <WeatherContainer setError={setError} />
+
     </>
   )
 
