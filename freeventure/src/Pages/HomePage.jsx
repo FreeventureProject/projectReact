@@ -30,6 +30,7 @@ function HomePage() {
         <caption>Scroll for Weathers Around the World!</caption>
       </div>
       <WeatherContainer setError={setError} />
+
     </>
   )
 
