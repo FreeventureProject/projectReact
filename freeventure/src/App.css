@@ -240,7 +240,7 @@ button:hover {
 }
 
 .weatherIdxContainer h3 {
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 
 .headingForecast {
@@ -438,4 +438,13 @@ p {
   padding-right: 10px;
   animation: SPIN 20s infinite;
 
+}
+
+.weatherIcon {
+  width: 70px;
+}
+
+.nameLocation {
+  padding: 10px;
+  margin: 5px
 }
