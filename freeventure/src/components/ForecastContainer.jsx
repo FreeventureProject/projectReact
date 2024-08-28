@@ -12,6 +12,7 @@ function ForecastContainer({ forecast }) {
                 <img src={day.day.condition.icon} alt="" />
                 <p>High: {day.day.maxtemp_f} °F</p>
                 <p>Low: {day.day.mintemp_f} °F</p>
+                <p>Chance of Rain: {day.day.daily_chance_of_rain}%</p>
               </li>
             ))}
           </ul>

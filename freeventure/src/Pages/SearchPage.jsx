@@ -50,6 +50,7 @@ const SearchPage = ({ setError }) => {
           <p>{Math.floor(weatherData.current.temp_f)} °F</p>
           <p>Feels like: {Math.floor(weatherData.current.feelslike_f)} °F</p>
           <p>Wind Speed: {Math.floor(weatherData.current.wind_mph)} MPH</p>
+          <p>Humidity: {weatherData.current.humidity}</p>
         </div>
       ) : (
         <p>No data available for the specified location.</p>
