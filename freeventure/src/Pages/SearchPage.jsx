@@ -45,9 +45,11 @@ const SearchPage = ({ setError }) => {
       ) : weatherData ? (
         <div className="weatherIdxContainer" style={themeStylesIdx}>
           <h3 className='nameLocation'>{weatherData.location.name}</h3>
-          <p>{Math.floor(weatherData.current.temp_f)} °F</p>
-          <p>feels like: {Math.floor(weatherData.current.feelslike_f)} °F</p>
+          <img src={weatherData.current.condition.icon} alt={weatherData.current.condition.text} />
           <p>{weatherData.current.condition.text}</p>
+          <p>{Math.floor(weatherData.current.temp_f)} °F</p>
+          <p>Feels like: {Math.floor(weatherData.current.feelslike_f)} °F</p>
+
         </div>
       ) : (
         <p>No data available for the specified location.</p>
