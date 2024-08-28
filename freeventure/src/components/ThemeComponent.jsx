@@ -13,7 +13,7 @@ const ThemeComponent = () => {
 
 
   return (
-    <div className="buttonContainer">
+    <div className="buttonNavContainer">
       <button onClick={toggleTheme} style={themeStyles}>Dark Mode</button>
     </div>
   )
