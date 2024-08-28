@@ -267,7 +267,9 @@ button:hover {
   box-shadow: 12px 12px 0 0 black;
 }
 
-
+.weatherIdxContainer h3 {
+  padding-bottom: 10px;
+}
 
 .headingForecast {
   display: flex;
@@ -462,4 +464,13 @@ p {
   padding-right: 10px;
   animation: SPIN 20s infinite;
 
+}
+
+.weatherIcon {
+  width: 70px;
+}
+
+.nameLocation {
+  padding: 10px;
+  margin: 5px
 }
