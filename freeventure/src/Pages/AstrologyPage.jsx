@@ -18,6 +18,7 @@ const AstronomyPage = () => {
   const darkTheme = useTheme()
 
   const themeStyles = {
+    backgroundColor: darkTheme ? '#EBEBEB' : '#1B2222',
     color: darkTheme ? '#455F4E' : '#CCDAD1',
     transition: 'background-color 0.3s, color 0.3s',
   };
