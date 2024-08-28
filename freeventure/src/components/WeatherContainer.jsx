@@ -49,7 +49,7 @@ function WeatherContainer({ setError }) {
             <caption>Hover Me!</caption>
             <div className="hiddenInfo" style={hiddenInfoTheme}>
               <p>Feels like: {Math.floor(weather.current.feelslike_f)} °F</p>
-              <p>Wind Speed: {Math.floor(weather.current.wind_mph)} mph, (kph): {Math.floor(weather.current.wind_kph)}</p>
+              <p>Wind Speed: {Math.floor(weather.current.wind_mph)} MPH, (KPH): {Math.floor(weather.current.wind_kph)}</p>
             </div>
           </div>
         ))
