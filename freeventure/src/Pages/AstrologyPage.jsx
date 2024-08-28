@@ -3,7 +3,6 @@ import { useState } from "react";
 import AstronomySearch from "../components/AstronomySearch";
 import { handleFetch } from "../../utils";
 import { API_KEY } from "../../config";
-import AstronomyWebpage from "../assets/AstronomyWebpage.jpg";
 import galaxy2 from "../assets/galaxy2.jpeg";
 import galaxyLight from "../assets/galaxyLight.jpg";
 import { useTheme } from "../ThemeContext";
