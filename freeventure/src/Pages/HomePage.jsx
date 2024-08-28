@@ -27,7 +27,7 @@ function HomePage() {
     <>
       <SearchBarHome handleSubmit={handleSubmit} />
       <div className="checkOtherWeather">
-        <caption>Scroll for Weathers Around the World!</caption>
+        <p>Scroll for Weathers Around the World!</p>
       </div>
       <WeatherContainer setError={setError} />
 

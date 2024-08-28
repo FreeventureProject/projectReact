@@ -21,7 +21,7 @@ const ForecastSearch = ({ onSubmit }) => {
     <div className="forecastPageContainer">
       <div className="headingForecast">
         <h1>
-          Find Your Forecast!
+          Forecast
         </h1>
       </div>
       <div className="forecastFormContainer">

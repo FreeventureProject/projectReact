@@ -38,6 +38,20 @@
   }
 }
 
+@keyframes colorChange {
+  0% {
+    color: #CEDEDA;
+  }
+
+  50% {
+    color: #173B3B;
+  }
+
+  100% {
+    color: #CEDEDA;
+  }
+}
+
 
 * {
   box-sizing: border-box;
@@ -200,7 +214,9 @@ button:hover {
   display: flex;
   justify-content: center;
   font-size: 15px;
+  animation: fadeIn 2s;
 }
+
 
 .weatherDataContainer {
   position: relative;
@@ -212,7 +228,7 @@ button:hover {
   flex-direction: row;
   gap: 7rem;
   max-width: calc(3 * 1px * 7rem);
-
+  animation: fadeIn 1s;
 }
 
 .weatherIdxContainer {
@@ -255,6 +271,23 @@ button:hover {
   transition: transform 0.3s, box-shadow 1s, visibility 0s, opacity 0.3s ease-in-out;
 }
 
+/* .hiddenInfoEarth {
+  display: flex;
+  width: 10px;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  border-radius: 5px;
+  transition: transform 0.3s, visibility 0s, opacity 0.3s ease-in-out;
+} */
+
+/* .hiddenInfoEarth img {
+  width: 100px;
+} */
+
 .weatherIdxContainer:hover {
   transform: translate(5px, 5px);
   border-bottom: solid 2px;
@@ -267,6 +300,13 @@ button:hover {
   box-shadow: 12px 12px 0 0 black;
 }
 
+
+/* .weatherIdxContainer:hover .hiddenInfoEarth {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(250px, 100px);
+} */
+
 .weatherIdxContainer h3 {
   padding-bottom: 10px;
 }
@@ -275,7 +315,7 @@ button:hover {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
-  translate: 0px 80px;
+  translate: 10px 9rem;
 }
 
 .forecastContainer {
@@ -285,6 +325,12 @@ button:hover {
   align-items: center;
   gap: 10px;
   animation: fadeIn 0.5s ease-in;
+}
+
+.forecastPageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .forecastFormContainer {
@@ -325,10 +371,26 @@ button:hover {
 .forecastList {
   display: flex;
   gap: 3rem;
+  margin-bottom: 8rem;
 }
 
-.forecastList li {
-  padding: 5px;
+.forecastHeaderContainer {
+  translate: 10px;
+
+}
+
+.individualList {
+  padding: 20px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+}
+
+.individualList:hover {
+  box-shadow: 0px 7px 5px 0px black;
+}
+
+.individualList p {
+  font-size: 13px;
 }
 
 
@@ -443,6 +505,7 @@ p {
   width: 230px;
   border-radius: 25px;
   margin: auto;
+  animation: fadeIn 1s;
 }
 
 .earth::after {

@@ -3,6 +3,7 @@ import { API_KEY } from '../../config';
 import { handleFetch } from '../../utils';
 import { useState, useEffect } from 'react';
 import { useTheme } from '../ThemeContext';
+import Earth from "../assets/Earth.webp"
 
 const SearchPage = ({ setError }) => {
   const [weatherData, setWeatherData] = useState(null);
@@ -51,6 +52,9 @@ const SearchPage = ({ setError }) => {
           <p>Feels like: {Math.floor(weatherData.current.feelslike_f)} °F</p>
           <p>Wind Speed: {Math.floor(weatherData.current.wind_mph)} MPH</p>
           <p>Humidity: {weatherData.current.humidity}</p>
+          {/* <div className='hiddenInfoEarth'>
+            <img src={Earth} alt="Earth picture" />
+          </div> */}
         </div>
       ) : (
         <p>No data available for the specified location.</p>

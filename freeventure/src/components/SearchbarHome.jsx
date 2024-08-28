@@ -25,6 +25,7 @@ const SearchBar = () => {
   }
 
   return (
+
     <div className="searchBarContainer">
       <div className="headingNEarth">
         <div className="headingWeatherContainer">
