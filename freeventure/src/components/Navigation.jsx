@@ -28,9 +28,6 @@ function NavBar({ title }) {
           {title}
         </Link>
       </div>
-      <div className="buttonNavContainer">
-        <ThemeComponent />
-      </div>
     </div>
     <ul className="navList" >
       <li><Link to="/" style={getLinkFont(0)} onMouseEnter={() => setIsHovered(0)}
@@ -48,6 +45,9 @@ function NavBar({ title }) {
           onMouseLeave={() => setIsHovered(null)}>
           Astronomy
         </Link>
+      </li>
+      <li>
+        <ThemeComponent />
       </li>
     </ul>
   </nav >

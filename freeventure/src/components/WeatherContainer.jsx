@@ -43,6 +43,7 @@ function WeatherContainer({ setError }) {
         weatherData.map((weather, index) => (
           <div className="weatherIdxContainer" key={index} style={themeStylesIdx}>
             <h3 className="nameLocation">{weather.location.name}</h3>
+            <img src={weather.current.condition.icon} alt="" />
             <p>{weather.current.condition.text}</p>
             <p>{Math.floor(weather.current.temp_f)} °F</p>
             <caption>Hover Me!</caption>
