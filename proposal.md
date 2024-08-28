@@ -8,7 +8,7 @@ Our application, WeatherWatch is for anyone searching for the weather. It allows
 
 ## API & React Router
 
-This application will use the Free-To-Play-Games API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
+This application will use the WeatherApi.com API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
 
 - Link to API documentation: [https://www.weatherapi.com/docs/]
 
@@ -26,8 +26,8 @@ This application will use the Free-To-Play-Games API. Below are the documentatio
 
 The application will feature the following frontend routes and core features:
 
-* On the `search` page, users can search a location and reroute them to a page where they can have access to the weather for it.
-* On the `current weather` page, users can view, the temperature, wind, airquality, and condition. Will have a button for forecast. 
+* On the `Home` page, users can search a location and reroute them to the `search` page where they can have access to the weather for it.
+* On the `search` page, users can view, the temperature, wind, and condition.
 * On the `forcast` page, users can see forecast for up to 5 days
 * On the `astrology` page, users can see the sunrise, sunset, moonrise and moonset for location searched 
 
