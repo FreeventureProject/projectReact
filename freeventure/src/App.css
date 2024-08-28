@@ -18,6 +18,26 @@
   }
 }
 
+@keyframes earth-orbit {
+  from {
+    transform: rotate(0deg) translateX(220px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(220px) rotate(-360deg);
+  }
+}
+
+@keyframes moon-orbit {
+  from {
+    transform: rotate(0deg) translateX(75px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(75px) rotate(-360deg);
+  }
+}
+
 
 * {
   box-sizing: border-box;
@@ -76,8 +96,8 @@ html {
   translate: 1px 5px;
 }
 
-.buttonNavContainer {
-  translate: 25px -5px;
+.buttonNavContainer button {
+  translate: 0px -3px
 }
 
 
@@ -209,9 +229,17 @@ button:hover {
   transition: border-bottom 0.3s, transform 0.2s;
 }
 
+.nameLocation {
+  padding: 10px;
+}
+
 .weatherIdxContainer caption {
   margin-top: 20px;
   font-size: 10px;
+}
+
+.weatherIdxContainer img {
+  padding-bottom: 15px;
 }
 
 .hiddenInfo {
@@ -304,6 +332,13 @@ button:hover {
   align-items: center;
 }
 
+.outsideContainer {
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 1s;
+}
+
+
 .sunrise {
   display: flex;
   align-items: center;
@@ -324,7 +359,7 @@ button:hover {
   margin-left: 10px;
 }
 
-.moonrise {
+.moonRise {
   display: flex;
   align-items: center;
 }
@@ -375,6 +410,14 @@ button:hover {
   position: relative;
 }
 
+.astroSearch button {
+  margin-top: 10px;
+}
+
+.astroSearch input {
+  border: none;
+}
+
 p {
   text-align: center;
   /* Center text if needed */
@@ -383,11 +426,13 @@ p {
 }
 
 .astroCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-style: solid;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   position: relative;
-  background: lightgrey;
-  width: 200px;
+  width: 230px;
   border-radius: 25px;
   margin: auto;
 }
@@ -403,30 +448,11 @@ p {
   animation: moon-orbit 3.5s linear infinite
 }
 
-@keyframes earth-orbit {
-  from {
-    transform: rotate(0deg) translateX(220px) rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg) translateX(220px) rotate(-360deg);
-  }
-}
-
-@keyframes moon-orbit {
-  from {
-    transform: rotate(0deg) translateX(75px) rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg) translateX(75px) rotate(-360deg);
-  }
-}
 
 .headingContainer {
   display: flex;
   justify-content: center;
-
+  padding-bottom: 3rem;
 }
 
 #earth {

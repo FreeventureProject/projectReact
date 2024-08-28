@@ -14,7 +14,13 @@ import earthIcon from "../assets/earthIcon.png"
 const AstronomyPage = () => {
   const [astronomyData, setAstronomy] = useState('')
   const [error, setError] = useState(null)
+
   const darkTheme = useTheme()
+
+  const themeStyles = {
+    color: darkTheme ? '#455F4E' : '#CCDAD1',
+    transition: 'background-color 0.3s, color 0.3s',
+  };
 
   const handleSubmit = async (event, query) => {
     event.preventDefault();
@@ -40,7 +46,8 @@ const AstronomyPage = () => {
     alignItems: "center",
     backgroundImage: `url(${darkTheme ? galaxy2 : galaxyLight})`,
     backgroundSize: "cover",
-    backgroundRepeat: "no-repeat"
+    backgroundRepeat: "no-repeat",
+    transition: 'background-image 0.3s'
   }
 
   const earth = {
@@ -63,7 +70,7 @@ const AstronomyPage = () => {
           <div style={earth} className="earth" />
           <div className="moon" />
         </div>
-        <div className="outsideContainer">
+        <div className="outsideContainer" style={themeStyles}>
           <div className="headingContainer">
             <h1>Astronomy</h1>
           </div>
