@@ -30,6 +30,11 @@ function NavBar({ title }) {
       </div>
     </div>
     <ul className="navList" >
+      <li><Link to="/" style={getLinkFont(0)} onMouseEnter={() => setIsHovered(0)}
+        onMouseLeave={() => setIsHovered(null)}>
+        Home
+      </Link>
+      </li>
       <li><Link to="/forecast" style={getLinkFont(1)} onMouseEnter={() => setIsHovered(1)}
         onMouseLeave={() => setIsHovered(null)}>
         Forecast
